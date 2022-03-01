@@ -1,6 +1,41 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
 int main()
-{
-int a=0;
-printf("%d",a);
+ {
+  long int n;
+  printf("Enter Date Of Birth in DDMMYYYY format: ");
+  scanf("%ld", &n);
+  long long bin = 0;
+  int rem;
+int r=0,b=0,c;
+  while (n>0) 
+  {
+    rem = n % 2;
+    n =n/ 2;
+    if (rem==0)
+    {
+      c=1;
+      b=b*10+c;
+    }
+    else if (rem==1)
+    {
+      c=0;
+      b=b*10+c;
+    }
+    bin =bin*10+ rem ;
+  }
+long long int d=b;
+int dec = 0, ij = 0, re;
+
+  while (d!=0) {
+    re = d % 10;
+    d /= 10;
+    dec += re * pow(2, ij);
+    ++ij;
+  }
+  printf("binary=%lld\n",bin);
+  printf("inverse binary=%lld\n",b);
+  printf("inverse decimal=%lld\n",dec);
+  long long int e=dec/2;
+  printf("new number=%lld%lld",e,e);
 }
