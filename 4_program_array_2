@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int i,k,j;
+    int a[6]={1,2,5,3,4,5};
+    for(i=0;i<6;i++)
+    {
+        for(j=i+1;j<6;j++)
+        {
+            if(a[i]==a[j])  //Checking if any of the number are duplicating
+            {
+                for(k=j;k<5;k++)    //shrinking the array to contain the new array
+                a[k]=a[k+1];
+            }
+        }
+    }
+    for(k=0;k<5;k++)
+    {
+        printf("%d\t",a[k]);
+    }
+}
