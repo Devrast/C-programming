@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int a[]={0,1,2,3,0,5,6};
+    int i,flag=0;
+    for(i=0;i<7;i++)
+    {
+        if(a[i]!=0)
+        {
+            printf("Number %d found at array index of %d\n",a[i],i);
+        }
+    }
+}
