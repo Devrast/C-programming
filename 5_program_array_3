@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int a[]={0,1,2,3,4,5,6};
+    int b,i,flag=0;
+    printf("Enter thr number to be searched: ");
+    scanf("%d",&b);
+    for(i=0;i<7;i++)
+    {
+        if(b==a[i])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    printf("Number %d found at array index of %d",b,i);
+    else
+    printf("Number not present in the array");
+}
