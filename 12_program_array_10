@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    printf("The array elsement: ");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the number to be added");
+    int m;
+    int b[n*2];
+    scanf("%d",&m);
+    //Placing it at odd array loacation
+    for(i=0;i<n*2;i++)
+    {
+        if(i%2==1)
+        b[i]=m;
+    }
+    int j=0;
+    for(i=0;i<n*2;i++)
+    {
+        if(i%2==0)
+        {
+        b[i]=a[j];
+        j=j+1;
+        }
+    }
+    printf("The new array is\n");
+    for(i=0;i<n*2;i++)
+    {
+        printf("%d\t",b[i]);
+    }
+}
