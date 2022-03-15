@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a[]={0,1,2,3,0,5,6};
+    int i,sum=0,min=a[1];
+    for(i=0;i<7;i++)
+    {
+        sum=sum+a[i];
+        if(a[i]<min)
+        min=a[i];
+    }
+    printf("The sum is %d\n",sum);
+    printf("The min Value is %d\n",min);
+}
