@@ -2,7 +2,7 @@
 int main()
 {
     int n,i;
-    printf("The array elsement: ");
+    printf("The array element: ");
     scanf("%d",&n);
     int a[n];
     for(i=0;i<n;i++)
