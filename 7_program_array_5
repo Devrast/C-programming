@@ -2,16 +2,13 @@
 int main()
 {
     int a[]={0,1,2,3,0,5,6};
-    int i,sum=0,max=a[0],min=a[1];
+    int i,sum=0,max=a[0];
     for(i=0;i<7;i++)
     {
         sum=sum+a[i];
-        if(a[i]<min)
-        min=a[i];
-        else if(a[i]>max)
+        if(a[i]>max)
         max=a[i];
     }
     printf("The sum is %d\n",sum);
-    printf("The min Value is %d\n",min);
     printf("The max value is %d",max);
 }
