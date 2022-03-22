@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j=0;
+    printf("The array element: ");
+    scanf("%d",&n);
+    int a[n],b[n/2];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    //Removing it at odd array loacation
+    for(i=0;i<n;i++)
+    {
+        if(i%2==0)
+        {
+        b[j]=a[i];
+        j++;
+        }
+    }
+    printf("The new array is\n");
+    for(i=0;i<j;i++)
+    {
+        printf("%d\t",b[i]);
+    }
+}
